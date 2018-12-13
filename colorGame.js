@@ -52,7 +52,7 @@ resetButton.addEventListener("click", function(){
   }
 });
 
-sun.on("click", function(){
+sun.on("click", function(){ //toggle color on sun icon
   body.toggleClass("lightTheme");
 });
 
