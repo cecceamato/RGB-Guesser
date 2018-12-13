@@ -1,12 +1,9 @@
-/* implement new layout for when screen is too small */
-
 body {
   background-color: #232323;
   margin: 0;
   font-family: 'Open Sans', sans-serif;
   min-width: 450px;
   max-height: 600px;
-  /* font-size: 20px; */
 }
 
 .square {
@@ -39,7 +36,6 @@ h1 {
   margin: 0;
   font-weight: normal;
   text-transform: uppercase;
-
 }
 
 #colorDisplay {
@@ -49,8 +45,6 @@ h1 {
 span {
   color: white;
 }
-
-
 
 #message {
   display: inline-block;
@@ -114,11 +108,17 @@ button:hover {
   margin-right: auto;
 }
 
-#stopwatch {
+button, i {
+  cursor: pointer; /*add*/
+}
+
+.fa-sun {
+  float: right;
+  color: steelblue;
   display: block;
-  margin: 0 auto;
-  text-align: center;
-  font-size: 36px;
-  color: white;
-  font-spacing: 1.5px;
+  padding-top: 0.8%;
+}
+
+.lightTheme {
+  background: white;
 }

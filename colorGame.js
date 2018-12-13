@@ -14,6 +14,9 @@ var hardDiff = document.querySelector("#hard");
 var score = 0;
 var scoreDisplay = document.querySelector("#scoreDisplay");
 var gameCheck = false;
+var sun = $(".fa-sun");
+var body = $("body");
+
 hardDiff.classList.add("selected"); //default choice
 
 easyDiff.addEventListener("click", function(){
@@ -36,7 +39,6 @@ hardDiff.addEventListener("click", function(){
   scoreReset();
   showSquares(squaresNum);
   playAgain(squaresNum);
-  // initializer();
 });
 
 resetButton.addEventListener("click", function(){
@@ -48,6 +50,10 @@ resetButton.addEventListener("click", function(){
     scoreDisplay.textContent = score;
     playAgain();
   }
+});
+
+sun.on("click", function(){
+  body.toggleClass("lightTheme");
 });
 
 function createDivs(){
@@ -86,7 +92,7 @@ function showSquares(squaresNum){
   }
 }
 
-function deleteSquares(){ //PERFECT //delete squares
+function deleteSquares(){ //delete squares
   for (var i = 0; i < colors.length ; i++){
     squares[i].style.display = "none";
   }
@@ -134,7 +140,6 @@ function changeColorsToCorrectOne(color){
 }
 
 function initializer(){ //useful only once
-  createDivs();
   colorDisplay.textContent = pickedColor; //fill span with color to guess
   for (var i = 0; i < squaresNum; i++){ //fill the squares
     squares[i].style.backgroundColor = colors[i];

@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="color_styling.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <title>RGB Guesser</title>
   </head>
   <body>
@@ -11,13 +12,16 @@
     <div id="wrapper">
       <h1>RGB Guesser <br> <span id="colorDisplay">RGB</span> <br> Pick the above color</h1>
       <div id="stripe">
+
         <div id="stripeTextPosition">
           <button id="reset">Play</button>
           <span id="message"></span>
           <button id="easy">EASY</button>
           <button id="hard">HARD</button>
           <span id="scoreText">Score: <span id="scoreDisplay">0</span></span>
+          <i class="fas fa-sun"></i>
         </div>
+
       </div>
 
       <div id="container"></div> <!-- squares container -->
@@ -25,6 +29,5 @@
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="colorGame.js"></script>
-    <script type="text/javascript" src="stopwatch.js"></script>
   </body>
 </html>
