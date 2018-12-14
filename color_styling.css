@@ -39,7 +39,7 @@ h1 {
 }
 
 #colorDisplay {
-  font-size: 200%;
+  font-size: 197%;
 }
 
 span {
@@ -119,6 +119,6 @@ button, i {
   padding-top: 0.8%;
 }
 
-.lightTheme { 
+.lightTheme {
   background: white;
 }
