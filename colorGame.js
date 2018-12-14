@@ -10,33 +10,37 @@ var messageDisplay = document.querySelector("#message");
 var h1 = document.querySelector("h1");
 var resetButton = document.querySelector("#reset");
 var easyDiff = document.querySelector("#easy");
-var hardDiff = document.querySelector("#hard");
+var mediumDiff = document.querySelector("#medium");
+// var hardDiff = document.querySelector("#hard");
 var score = 0;
 var scoreDisplay = document.querySelector("#scoreDisplay");
 var gameCheck = false;
 var sun = $(".fa-sun");
 var body = $("body");
 
-hardDiff.classList.add("selected"); //default choice
+mediumDiff.classList.add("selected"); //default choice
 
 easyDiff.addEventListener("click", function(){
   squaresNum = 3;
   gameCheck = false;
   easyDiff.classList.add("selected");
-  hardDiff.classList.remove("selected");
+  mediumDiff.classList.remove("selected");
+  // hardDiff.classList.remove("selected");
   deleteSquares();
-  scoreReset();
+  // scoreReset();
   showSquares(squaresNum);
   playAgain(squaresNum);
 });
 
-hardDiff.addEventListener("click", function(){
+
+mediumDiff.addEventListener("click", function(){
   squaresNum = 6;
   gameCheck = false;
   easyDiff.classList.remove("selected");
-  hardDiff.classList.add("selected");
+  mediumDiff.classList.add("selected");
+  // hardDiff.classList.remove("selected");
   deleteSquares();
-  scoreReset();
+  // scoreReset();
   showSquares(squaresNum);
   playAgain(squaresNum);
 });
@@ -115,22 +119,7 @@ function correctPick(clickedColor){
   h1.style.backgroundColor = clickedColor;
   resetButton.textContent = "Play Again?";
   changeColorsToCorrectOne(clickedColor);
-  scoreIncrease();
-}
-
-function scoreIncrease(){
-  score += 100;
-  scoreDisplay.textContent = score;
-}
-
-function scoreDecrease(){
-  score -= 30;
-  scoreDisplay.textContent = score;
-}
-
-function scoreReset(){
-  score = 0;
-  scoreDisplay.textContent = score;
+  // scoreIncrease();
 }
 
 function changeColorsToCorrectOne(color){
@@ -154,6 +143,7 @@ function initializer(){ //useful only once
         correctPick(clickedColor);
       } else {
           if (!gameCheck){
+            // if()
             this.style.backgroundColor = "#232323";
             messageDisplay.textContent = "Try Again! -30";
             scoreDecrease();
