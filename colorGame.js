@@ -21,27 +21,27 @@ var body = $("body");
 mediumDiff.classList.add("selected"); //default choice
 
 easyDiff.addEventListener("click", function(){
-  squaresNum = 3;
+  // squaresNum = 3;
   gameCheck = false;
   easyDiff.classList.add("selected");
   mediumDiff.classList.remove("selected");
   // hardDiff.classList.remove("selected");
   deleteSquares();
   // scoreReset();
-  showSquares(squaresNum);
+  showSquares(3);
   playAgain(squaresNum);
 });
 
 
 mediumDiff.addEventListener("click", function(){
-  squaresNum = 6;
+  // squaresNum = 6;
   gameCheck = false;
   easyDiff.classList.remove("selected");
   mediumDiff.classList.add("selected");
   // hardDiff.classList.remove("selected");
   deleteSquares();
   // scoreReset();
-  showSquares(squaresNum);
+  showSquares(6);
   playAgain(squaresNum);
 });
 
