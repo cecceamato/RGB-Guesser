@@ -1,9 +1,6 @@
-//TO IMPLEMENT:
-//stopwatch with final score of 1000;
-
 var squaresNum = 6; //Default Difficulty
 var colors = generateRandomColors(squaresNum);
-var squares = createDivs();//document.querySelectorAll(".square");
+var squares = createDivs(); //document.querySelectorAll(".square");
 var pickedColor = pickColor();
 var colorDisplay = document.querySelector("#colorDisplay");
 var messageDisplay = document.querySelector("#message");
@@ -52,7 +49,7 @@ resetButton.addEventListener("click", function(){
   }
 });
 
-sun.on("click", function(){ //toggle color on sun icon
+sun.on("click", function(){ //toggle backgroundColor on sun icon
   body.toggleClass("lightTheme");
 });
 
@@ -60,7 +57,7 @@ function createDivs(){
   for (var i = 0; i < squaresNum; i++){ //create squares
     $("#container").append("<div class='square'></div>");
   }
-  return $(".square");}; //jQuery
+  return $(".square");};
 
 function generateRandomColors(num){
   var arr = []; //add num to random colors array
@@ -70,7 +67,7 @@ function generateRandomColors(num){
   return arr; //return that array
 }
 
-function randomColor(){ //works fine
+function randomColor(){ //perfectly working
   //pick red, green and blue from 0 to 255
   var red = Math.floor(Math.random() * 256);
   var green = Math.floor(Math.random() * 256);
@@ -115,7 +112,6 @@ function correctPick(clickedColor){
   h1.style.backgroundColor = clickedColor;
   resetButton.textContent = "Play Again?";
   changeColorsToCorrectOne(clickedColor);
-  // scoreIncrease();
 }
 
 function changeColorsToCorrectOne(color){
@@ -139,10 +135,8 @@ function initializer(){ //useful only once
         correctPick(clickedColor);
       } else {
           if (!gameCheck){
-            // if()
             this.style.backgroundColor = "#232323";
             messageDisplay.textContent = "Try Again! -30";
-            // scoreDecrease();
           }
         }
       });//eventListener closure
