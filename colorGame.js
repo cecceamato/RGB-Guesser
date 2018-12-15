@@ -11,7 +11,6 @@ var h1 = document.querySelector("h1");
 var resetButton = document.querySelector("#reset");
 var easyDiff = document.querySelector("#easy");
 var mediumDiff = document.querySelector("#medium");
-// var hardDiff = document.querySelector("#hard");
 var score = 0;
 var scoreDisplay = document.querySelector("#scoreDisplay");
 var gameCheck = false;
@@ -21,29 +20,26 @@ var body = $("body");
 mediumDiff.classList.add("selected"); //default choice
 
 easyDiff.addEventListener("click", function(){
-  // squaresNum = 3;
+  squaresNum = 3;
   gameCheck = false;
   easyDiff.classList.add("selected");
   mediumDiff.classList.remove("selected");
-  // hardDiff.classList.remove("selected");
   deleteSquares();
-  // scoreReset();
-  showSquares(3);
+  showSquares(squaresNum);
   playAgain(squaresNum);
 });
 
 
 mediumDiff.addEventListener("click", function(){
-  // squaresNum = 6;
+  squaresNum = 6;
   gameCheck = false;
   easyDiff.classList.remove("selected");
   mediumDiff.classList.add("selected");
-  // hardDiff.classList.remove("selected");
   deleteSquares();
-  // scoreReset();
-  showSquares(6);
+  showSquares(squaresNum);
   playAgain(squaresNum);
 });
+
 
 resetButton.addEventListener("click", function(){
   if (this.textContent == "Play Again?"){
@@ -146,7 +142,7 @@ function initializer(){ //useful only once
             // if()
             this.style.backgroundColor = "#232323";
             messageDisplay.textContent = "Try Again! -30";
-            scoreDecrease();
+            // scoreDecrease();
           }
         }
       });//eventListener closure
