@@ -16,6 +16,19 @@ var scoreDisplay = document.querySelector("#scoreDisplay");
 var gameCheck = false;
 hardDiff.classList.add("selected"); //default choice
 
+resetButton.addEventListener("click", function(){
+  // gameCheck = false;
+  playAgain();
+  // if (this.textContent == "Play Again?"){
+  //   gameCheck = false;
+  //   playAgain();
+  // } else{
+  //   score = 0;
+  //   scoreDisplay.textContent = score;
+  //   playAgain();
+  // }
+});
+
 easyDiff.addEventListener("click", function(){
   squaresNum = 3;
   gameCheck = false;
@@ -24,7 +37,7 @@ easyDiff.addEventListener("click", function(){
   deleteSquares();
   scoreReset();
   showSquares(squaresNum);
-  playAgain(squaresNum);
+  playAgain();
 });
 
 hardDiff.addEventListener("click", function(){
@@ -35,19 +48,10 @@ hardDiff.addEventListener("click", function(){
   deleteSquares();
   scoreReset();
   showSquares(squaresNum);
-  playAgain(squaresNum);
+  playAgain();
 });
 
-resetButton.addEventListener("click", function(){
-  if (this.textContent == "Play Again?"){
-    gameCheck = false;
-    playAgain();
-  } else{
-    score = 0;
-    scoreDisplay.textContent = score;
-    playAgain();
-  }
-});
+
 
 function createDivs(){
   for (var i = 0; i < squaresNum; i++){ //create squares
@@ -95,9 +99,9 @@ function playAgain(){ //
   h1.style.backgroundColor = "steelblue"; //h1 backgroundColor go back to default
   colors = generateRandomColors(squaresNum); //generate new colors --- parameter for how many squares we want
   pickedColor = pickColor();
-  resetButton.textContent = "Play";
   messageDisplay.textContent = "";
   colorDisplay.textContent = pickedColor; //show the rgb color to guess in span
+  gameCheck = false;
   for (var i = 0; i < squares.length; i++){ //changes colors of the squares
     squares[i].style.backgroundColor = colors[i];
   }
@@ -130,6 +134,14 @@ function changeColorsToCorrectOne(color){
   for (var i = 0; i < squares.length; i++){  //change each color to match given color
     squares[i].style.backgroundColor = color;
   }
+}
+
+function createRestart(){
+
+}
+
+function newColors(){
+
 }
 
 function initializer(){ //useful only once
