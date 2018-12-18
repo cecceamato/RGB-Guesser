@@ -14,19 +14,20 @@ var hardDiff = document.querySelector("#hard");
 var score = 0;
 var scoreDisplay = document.querySelector("#scoreDisplay");
 var gameCheck = false;
+var stopwatch = null;
+
 hardDiff.classList.add("selected"); //default choice
 
+
+
 resetButton.addEventListener("click", function(){
-  // gameCheck = false;
-  playAgain();
-  // if (this.textContent == "Play Again?"){
-  //   gameCheck = false;
-  //   playAgain();
-  // } else{
-  //   score = 0;
-  //   scoreDisplay.textContent = score;
-  //   playAgain();
-  // }
+  if (this.textContent === "START"){
+    startStopwatch();
+    this.textContent = "RESET";
+  } else {
+    resetStopwatch();
+    playAgain();
+  }
 });
 
 easyDiff.addEventListener("click", function(){
@@ -102,6 +103,7 @@ function playAgain(){ //
   messageDisplay.textContent = "";
   colorDisplay.textContent = pickedColor; //show the rgb color to guess in span
   gameCheck = false;
+  scoreReset();
   for (var i = 0; i < squares.length; i++){ //changes colors of the squares
     squares[i].style.backgroundColor = colors[i];
   }
@@ -110,7 +112,7 @@ function playAgain(){ //
 function correctPick(clickedColor){
   messageDisplay.textContent = "Correct! +100";
   h1.style.backgroundColor = clickedColor;
-  resetButton.textContent = "Play Again?";
+  // resetButton.textContent = "Play Again?";
   changeColorsToCorrectOne(clickedColor);
   scoreIncrease();
 }
