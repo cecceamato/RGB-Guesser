@@ -7,19 +7,32 @@ var seconds = $("#secs");
 var secondsTime = 0;
 var minutesTime = 0;
 var textValue = "";
-
+var stopwatch = null;
 
 // function startStopwatch(){
 //
 // }
-reset.addEventListener("click", function(){
-  textValue = resetButton.textContent;
-  console.log(textValue);
-  if (textValue === "Play"){
-    setInterval(incrementTime, 1000);
-    textValue = "Play Again";
-  }
-});
+// reset.addEventListener("click", function(){
+//   // textValue = this.textContent;
+//   // console.log(textValue);
+//   if (this.textContent === "START"){
+//     setInterval(incrementTime, 1000);
+//     // textValue = "RESET";
+//     // this.textContent = textValue;
+//     this.textContent = "RESET";
+//   } else {
+//     playAgain();
+//   }
+// });
+
+function startStopwatch(){
+  stopwatch = setInterval(incrementTime, 1000);
+}
+
+function resetStopwatch(){
+  clearInterval(stopwatch);
+}
+
 
 function incrementTime(){
   secondsTime ++;
