@@ -7,7 +7,7 @@ var seconds = $("#secs");
 var secondsTime = 0;
 var minutesTime = 0;
 var textValue = "";
-var stopwatch = null;
+
 
 // function startStopwatch(){
 //
