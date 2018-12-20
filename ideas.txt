@@ -1,0 +1,2 @@
+Having a start button at the beginning of the page with the rules below it.
+Then, as soon as the user clicks, having the squares generate and the stopwatch starts.
