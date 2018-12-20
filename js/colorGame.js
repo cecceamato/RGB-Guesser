@@ -14,7 +14,7 @@ var hardDiff = document.querySelector("#hard");
 var score = 0;
 var scoreDisplay = document.querySelector("#scoreDisplay");
 var gameCheck = false;
-var stopwatch = null;
+var stopwatch;
 
 hardDiff.classList.add("selected"); //default choice
 
@@ -139,7 +139,7 @@ function changeColorsToCorrectOne(color){
 }
 
 function createRestart(){
-
+  $("#stripeTextPosition").append("<button id=newColors>New Colors</button>");
 }
 
 function newColors(){
