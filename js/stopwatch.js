@@ -2,7 +2,7 @@
 //text() play 'if'
 //alert on time ran out or 1000 score reached
 
-var seconds = $("#secs");
+var seconds = document.querySelector("#secs");
 var secondsTime = 0;
 var textValue = "";
 
@@ -21,7 +21,7 @@ function incrementTime(){
   secondsTime ++;
   console.log(secondsTime);
   if (secondsTime < 10){
-      seconds.text("0" + secondsTime);
+      seconds.textContent = "0" + secondsTime;
   } else seconds.text(secondsTime);
 
   if (secondsTime > 59){
