@@ -28,13 +28,24 @@ body {
   font-size: 40px;
 }
 
+#gotogame {
+  color: white;
+  display: block;
+  margin: 20px auto 0 auto;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}
+
 #rules {
   text-align: center;
   font-size: 32px;
   display: block;
   color: white;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 60px auto 0px auto;
+  width: 500px;
+  /* border: 2px solid steelblue; */
+  background-color: steelblue;
 }
 
 #container {
@@ -63,8 +74,6 @@ span {
   color: white;
 }
 
-
-
 #message {
   display: inline-block;
   width: 20%;
@@ -88,10 +97,16 @@ span {
 }
 
 #reset {
+  color: blue;
   display: block;
   margin: 20px auto 0 auto;
   cursor: pointer;
   text-align: center;
+  color: steelblue;
+}
+
+#reset:hover {
+  background-color: #232323;
 }
 
 button {
@@ -130,13 +145,17 @@ button:hover {
   margin-right: auto;
 }
 
+#easy:hover, #hard:hover {
+  cursor: pointer;
+}
+
 #stopwatch {
-  /* display: block; */
-  /* margin: 0 auto;
-  text-align: center; */
+  display: block; */
+  margin: 0 auto;
+  text-align: center;
   font-size: 36px;
-  /* color: white;
-  font-spacing: 1.5px; */
+  color: white;
+  font-spacing: 1.5px;
 }
 
 #secs {
