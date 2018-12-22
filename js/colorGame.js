@@ -8,7 +8,7 @@ var pickedColor = pickColor();
 var colorDisplay = document.querySelector("#colorDisplay");
 var messageDisplay = document.querySelector("#message");
 var h1 = document.querySelector("h1");
-var resetButton = document.querySelector("#reset");
+var startButton = document.querySelector("#start");
 var easyDiff = document.querySelector("#easy");
 var hardDiff = document.querySelector("#hard");
 var score = 0;
@@ -20,13 +20,11 @@ hardDiff.classList.add("selected"); //default choice
 
 
 
-resetButton.addEventListener("click", function(){
+startButton.addEventListener("click", function(){
   if (this.textContent === "START"){
+    this.classList.add("hidden");
     startStopwatch();
-    this.textContent = "RESET";
-  } else {
-    resetStopwatch();
-    playAgain();
+    seconds.style.visibility = "visible";
   }
 });
 
@@ -163,7 +161,7 @@ function initializer(){ //useful only once
       } else {
           if (!gameCheck){
             this.style.backgroundColor = "#232323";
-            messageDisplay.textContent = "Try Again! -30";
+            messageDisplay.textContent = "Try Again! -40";
             scoreDecrease();
           }
         }
