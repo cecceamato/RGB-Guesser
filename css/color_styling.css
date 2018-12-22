@@ -30,11 +30,12 @@ body {
 
 #gotogame {
   color: white;
-  display: block;
-  margin: 20px auto 0 auto;
+  /* display: block; */
+  margin: 20px auto 5px auto;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
+  position: inline-block;
 }
 
 #rules {
@@ -96,7 +97,7 @@ span {
   font-weight: bold;
 }
 
-#reset {
+#start {
   color: blue;
   display: block;
   margin: 20px auto 0 auto;
@@ -105,8 +106,13 @@ span {
   color: steelblue;
 }
 
-#reset:hover {
+#start:hover {
   background-color: #232323;
+}
+
+.hidden {
+  opacity: 0;
+  transition: opacity 0.5 ease-in;
 }
 
 button {
@@ -150,7 +156,7 @@ button:hover {
 }
 
 #stopwatch {
-  display: block; */
+  display: block;
   margin: 0 auto;
   text-align: center;
   font-size: 36px;
