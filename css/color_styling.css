@@ -55,6 +55,11 @@ body {
   min-width: 450px;
 }
 
+#newColors {
+  cursor: pointer;
+  background-color: #232323;
+}
+
 h1 {
   color: white;
   line-height: 1.1;
@@ -98,21 +103,21 @@ span {
 }
 
 #start {
-  color: blue;
+  color: steelblue;
+  cursor: pointer;
+  background-color: #232323;
   display: block;
   margin: 20px auto 0 auto;
-  cursor: pointer;
   text-align: center;
-  color: steelblue;
 }
 
 #start:hover {
   background-color: #232323;
+  color: white;
 }
 
 .hidden {
   opacity: 0;
-  transition: opacity 0.5 ease-in;
 }
 
 button {
