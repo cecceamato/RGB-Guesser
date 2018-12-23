@@ -14,7 +14,7 @@ var hardDiff = document.querySelector("#hard");
 var newColors = document.querySelector("#newColors");
 var score = 0;
 var scoreDisplay = document.querySelector("#scoreDisplay");
-var gameCheck = false;
+var gameCheck = true;
 var stopwatch;
 
 hardDiff.classList.add("selected"); //default choice
@@ -23,39 +23,41 @@ hardDiff.classList.add("selected"); //default choice
 
 startButton.addEventListener("click", function(){
   if (this.textContent === "START"){
-    this.classList.add("hidden");
+    gameCheck = false;
     startStopwatch();
+    this.remove(); // remove start button
     seconds.style.visibility = "visible";
   }
 });
 
 newColors.addEventListener("click", function(){
   deleteSquares();
-  // scoreReset();
   showSquares(squaresNum);
   playAgain();
 })
 
 easyDiff.addEventListener("click", function(){
+  resetStopwatch();
+  playAgain();
   squaresNum = 3;
-  gameCheck = false;
+  gameCheck = true;
   easyDiff.classList.add("selected");
   hardDiff.classList.remove("selected");
   deleteSquares();
   scoreReset();
   showSquares(squaresNum);
-  playAgain();
 });
 
 hardDiff.addEventListener("click", function(){
+  resetStopwatch();
+  playAgain();
   squaresNum = 6;
-  gameCheck = false;
+  gameCheck = true;
   easyDiff.classList.remove("selected");
   hardDiff.classList.add("selected");
   deleteSquares();
   scoreReset();
   showSquares(squaresNum);
-  playAgain();
 });
 
 
@@ -109,7 +111,6 @@ function playAgain(){ //
   messageDisplay.textContent = "";
   colorDisplay.textContent = pickedColor; //show the rgb color to guess in span
   gameCheck = false;
-  // scoreReset();
   for (var i = 0; i < squares.length; i++){ //changes colors of the squares
     squares[i].style.backgroundColor = colors[i];
   }
