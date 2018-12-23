@@ -4,7 +4,6 @@
 
 var seconds = document.querySelector("#secs");
 var secondsTime = 0;
-var textValue = "";
 
 
 function startStopwatch(){
@@ -22,10 +21,10 @@ function incrementTime(){
   console.log(secondsTime);
   if (secondsTime < 10){
       seconds.textContent = "0" + secondsTime;
-  } else seconds.text(secondsTime);
+  } else seconds.textContent = secondsTime;
 
   if (secondsTime > 59){
-    secondsTime = 0;
-    seconds.text("0" + secondsTime);
+    alert("Time is up!");
+    resetStopwatch();
   }
 }
