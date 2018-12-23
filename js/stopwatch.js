@@ -24,7 +24,8 @@ function incrementTime(){
   } else seconds.textContent = secondsTime;
 
   if (secondsTime > 59){
-    alert("Time is up!");
+    alert("Time is up! You scored: " + score);
     resetStopwatch();
+    gameCheck = true; //stop the game.
   }
 }
