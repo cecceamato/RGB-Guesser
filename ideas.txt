@@ -2,3 +2,5 @@ Add new scoreIncrease and scoreDecrease for when difficulty is different.
 
 HARD -> Correct = + 100; Wrong = -35;
 EASY -> Correct = +75; Wrong = -50;
+
+Missing RESET Button;
