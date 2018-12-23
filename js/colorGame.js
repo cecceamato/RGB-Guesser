@@ -16,6 +16,7 @@ var score = 0;
 var scoreDisplay = document.querySelector("#scoreDisplay");
 var gameCheck = true;
 var stopwatch;
+var newColors = document.querySelector("#newColors");
 
 hardDiff.classList.add("selected"); //default choice
 
@@ -27,6 +28,8 @@ startButton.addEventListener("click", function(){
     startStopwatch();
     this.remove(); // remove start button
     seconds.style.visibility = "visible";
+    newColors.classList.remove("hidden");
+
   }
 });
 
