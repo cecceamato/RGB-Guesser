@@ -11,6 +11,7 @@ var h1 = document.querySelector("h1");
 var startButton = document.querySelector("#start");
 var easyDiff = document.querySelector("#easy");
 var hardDiff = document.querySelector("#hard");
+var newColors = document.querySelector("#newColors");
 var score = 0;
 var scoreDisplay = document.querySelector("#scoreDisplay");
 var gameCheck = false;
@@ -27,6 +28,13 @@ startButton.addEventListener("click", function(){
     seconds.style.visibility = "visible";
   }
 });
+
+newColors.addEventListener("click", function(){
+  deleteSquares();
+  // scoreReset();
+  showSquares(squaresNum);
+  playAgain();
+})
 
 easyDiff.addEventListener("click", function(){
   squaresNum = 3;
@@ -101,7 +109,7 @@ function playAgain(){ //
   messageDisplay.textContent = "";
   colorDisplay.textContent = pickedColor; //show the rgb color to guess in span
   gameCheck = false;
-  scoreReset();
+  // scoreReset();
   for (var i = 0; i < squares.length; i++){ //changes colors of the squares
     squares[i].style.backgroundColor = colors[i];
   }
