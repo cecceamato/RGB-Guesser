@@ -6,6 +6,7 @@ var seconds = document.querySelector("#secs");
 var secondsTime = 0;
 
 
+
 function startStopwatch(){
   stopwatch = setInterval(incrementTime, 1000);
   console.log(secondsTime);
@@ -24,7 +25,7 @@ function incrementTime(){
   } else seconds.textContent = secondsTime;
 
   if (secondsTime > 59){
-    alert("Time is up! You scored: " + score);
+    swal("You scored " + score + " points!");
     resetStopwatch();
     gameCheck = true; //stop the game.
   }
