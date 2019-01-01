@@ -4,3 +4,5 @@ HARD -> Correct = + 100; Wrong = -35;
 EASY -> Correct = +75; Wrong = -50;
 
 Missing RESET Button;
+
+The stopwatch should be an object;
