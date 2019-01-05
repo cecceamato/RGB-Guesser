@@ -17,8 +17,14 @@ class Stopwatch{
     clearInterval(stopper);
   }
 
+  reset(){
+    this.stop();
+    secondsTime = 0;
+    seconds.textContent = "00";
+  }
+
   maxScoreReached(){
-    swal("You have reached the maximum score: " + score)
+    swal("You have reached the maximum score: " + score);
   }
 
   incrementTime(){
