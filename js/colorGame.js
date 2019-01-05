@@ -17,21 +17,23 @@ var scoreDisplay = document.querySelector("#scoreDisplay");
 var gameCheck = true;
 var newColors = document.querySelector("#newColors");
 
-
-
 hardDiff.classList.add("selected"); //default choice
 
-
+function gameStarter(){
+  gameCheck = false;
+  stopwatch.start();
+  startButton.remove(); // remove start button
+  seconds.style.visibility = "visible";
+  newColors.classList.remove("hidden");
+}
 
 startButton.addEventListener("click", function(){
   if (this.textContent === "START"){
-    gameCheck = false;
-    stopwatch.start();
-    this.remove(); // remove start button
-    seconds.style.visibility = "visible";
-    newColors.classList.remove("hidden");
+    gameStarter();
   }
 });
+
+// if (gameCheck == false && )
 
 newColors.addEventListener("click", function(){
   deleteSquares();
@@ -40,7 +42,8 @@ newColors.addEventListener("click", function(){
 })
 
 easyDiff.addEventListener("click", function(){
-  resetStopwatch();
+  window.location.reload(); //bad way to manage it, but it works
+  stopwatch.reset();
   playAgain();
   squaresNum = 3;
   gameCheck = true;
@@ -52,7 +55,8 @@ easyDiff.addEventListener("click", function(){
 });
 
 hardDiff.addEventListener("click", function(){
-  resetStopwatch();
+  window.location.reload(); //bad way to manage it, but it works
+  stopwatch.reset();
   playAgain();
   squaresNum = 6;
   gameCheck = true;
