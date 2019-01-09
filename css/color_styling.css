@@ -1,7 +1,7 @@
 /* implement new layout for when screen is too small */
 
 body {
-  background-color: #232323;
+  background-color: #232323 !important;
   margin: 0;
   font-family: 'Open Sans', sans-serif;
   min-width: 450px;
@@ -24,8 +24,10 @@ body {
   background-color: steelblue;
 }
 
+
 #wrapper h1 {
   font-size: 40px;
+  color: blue;
 }
 
 #gotogame {
@@ -43,10 +45,31 @@ body {
   font-size: 32px;
   display: block;
   color: white;
+  background-color: #404040;
   margin: 60px auto 0px auto;
+  padding-bottom: 20px;
   width: 500px;
+  border-radius: 25px;
   /* border: 2px solid steelblue; */
-  background-color: steelblue;
+}
+
+#rules a {
+   color: white;
+   font-size: 1.2em;
+   border-radius: 10px;
+   background: none;
+   text-decoration: none;
+   border: 2px solid white;
+ }
+
+#rules button {
+   font-size: 1.2em;
+   border-radius: 10px
+   text-decoration: none;
+ }
+
+#rules button:hover {
+  background: none;
 }
 
 #container {
@@ -54,7 +77,6 @@ body {
   max-width: 620px;
   min-width: 450px;
 }
-
 
 
 h1 {
@@ -130,7 +152,7 @@ span {
   opacity: 0;
 }
 
-button {
+button, a {
   border: none;
   background: none;
   text-transform: uppercase;
@@ -140,6 +162,7 @@ button {
   letter-spacing: 1px;
   font-size: inherit;
   transition: all 0.2s;
+  text-decoration: none;
 }
 
 button:hover {
