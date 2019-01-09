@@ -33,7 +33,6 @@ startButton.addEventListener("click", function(){
   }
 });
 
-// if (gameCheck == false && )
 
 newColors.addEventListener("click", function(){
   deleteSquares();
@@ -42,9 +41,7 @@ newColors.addEventListener("click", function(){
 })
 
 easyDiff.addEventListener("click", function(){
-  window.location.reload(); //bad way to manage it, but it works
   stopwatch.reset();
-  playAgain();
   squaresNum = 3;
   gameCheck = true;
   easyDiff.classList.add("selected");
@@ -52,10 +49,10 @@ easyDiff.addEventListener("click", function(){
   deleteSquares();
   scoreReset();
   showSquares(squaresNum);
+  playAgain();
 });
 
 hardDiff.addEventListener("click", function(){
-  window.location.reload(); //bad way to manage it, but it works
   stopwatch.reset();
   playAgain();
   squaresNum = 6;
@@ -66,7 +63,6 @@ hardDiff.addEventListener("click", function(){
   scoreReset();
   showSquares(squaresNum);
 });
-
 
 
 function createDivs(){
